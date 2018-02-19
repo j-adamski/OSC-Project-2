@@ -7,25 +7,20 @@ Placeholder for pic:
 Placeholder for License:
 Installation file called "getting started.md"
 
-Features list:
+- [ ] Features list:
     NOT DONE, USE GOOGLE DOC FOR THIS, SOMEONE NEEDS TO TAKE
 
-FAQ Section:
-    NOT DONE, SOMEONE NEEDS TO TAKE
-2:
-Contributions.md  DONE
+- [ ] 2: Contributions.md  DONE
 
-3:
-FAQ Page:
+- [ ] 3: FAQ Page:
     Make a FAQ Section in the README.md file
-    NOT DONE
-4:
-UML Diagram
+    EUNICE IS DOING THIS
+
+- [X] 4: UML Diagram
     can be a class diagram, sequence diagram, any type of diagram to see what parts you will need to start code wise
     IRI IS DOING THIS
     
-6:
-Have at least one file that you can show works that shows project has been started. Needs comments that are a breakdown of the work that has been done. Needs an installation script, something that shows work was attempted.
+- [x] 6:Have at least one file that you can show works that shows project has been started. Needs comments that are a breakdown of the work that has been done. Needs an installation script, something that shows work was attempted.
     THOMAS IS DOING THIS
 
 DELIVERABLES:
