@@ -7,12 +7,12 @@ Placeholder for pic:
 Placeholder for License:
 Installation file called "getting started.md"
 
-- [ ] Features list:
+- [ ] 1: Features list:
     NOT DONE, USE GOOGLE DOC FOR THIS, SOMEONE NEEDS TO TAKE
 
-- [ ] 2: Contributions.md  DONE
+- [x] 2: Contributions.md  DONE
 
-- [ ] 3: FAQ Page:
+- [x] 3: FAQ Page:
     Make a FAQ Section in the README.md file
     EUNICE IS DOING THIS
 
