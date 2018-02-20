@@ -2,13 +2,16 @@
 
 Time Management App
 
-Mission Statement:
+Mission Statement: TODO
+
 Placeholder for pic:
-Placeholder for License:
+
+Placeholder for License: LICENSE DONE
+
 Installation file called "getting started.md"
 
 - [ ] 1: Features list:
-    NOT DONE, USE GOOGLE DOC FOR THIS, SOMEONE NEEDS TO TAKE
+    Julia took this, can use t3overview.txt to get started
 
 - [x] 2: Contributions.md  DONE
 
