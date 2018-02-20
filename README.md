@@ -1,38 +1,27 @@
 # OSC-Project-2
 
-Time Management App
+T3: Todo List Time Tracker
 
-Mission Statement: TODO
+Mission Statement: To assist those who struggle with time management through a simple, easy to use to do list time tracker
 
-Placeholder for pic:
+Placeholder for pic: TODO
 
-Placeholder for License: LICENSE DONE
+License: GPL
 
-Installation file called "getting started.md"
+Installation/Compiling "GettingStarted.md": DONE Thomas
 
-- [ ] 1: Features list:
-    Julia took this, can use t3overview.txt to get started
+Features List: TODO Julia
 
-- [x] 2: Contributions.md  DONE
+Contributions.md: Done Thomas
 
-- [x] 3: FAQ Page:
-    Make a FAQ Section in the README.md file
-    EUNICE IS DOING THIS
+FAQ Section of the README: TODO Eunice
 
-- [X] 4: UML Diagram
-    can be a class diagram, sequence diagram, any type of diagram to see what parts you will need to start code wise
-    IRI IS DOING THIS
-    
-- [x] 6:Have at least one file that you can show works that shows project has been started. Needs comments that are a breakdown of the work that has been done. Needs an installation script, something that shows work was attempted.
-    THOMAS IS DOING THIS
+IRC Channel:
+    Freenode IRC Channel Join Command:
+        /join ##T3Comp412
 
-DELIVERABLES:
-JPG of IRC conversation. Pull requests that the professor can see that shows we made README changes and code changes.
+UML Diagram: TODO Iri
 
-URL of group bitbucket on Sakai
+One Code file to show project has been started: TODO Thomas
 
-UML Diagram/project layout on Sakai
 
-README.md, Contributions.md, and FAQs should be in REPO
-
-AT LEAST ONE COMMIT OF ACTUAL RUNNING CODE
