@@ -9,7 +9,7 @@ setup(
 	author="comp412GroupProject",
 	author_email='thatzopoulos@luc.edu',
 	url='https://github.com/j-adamski/OSC-Project-2/',
-        licence='GPL',
+        license='GPL',
 	py_modules=['t3'],
 	entry_points={
 		'console_scripts': [
