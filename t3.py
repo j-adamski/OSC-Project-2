@@ -32,16 +32,32 @@ import os
 	#prints out help dialog
 
 #adding multiple tasks under one project:
-	#Parse any non whitespace string followed by a clon as a project, anything after it is a task within that project
+	#Parse any non whitespace string followed by a colon as a project, anything after it is a task within that project
 	#t3 add "project1: task four"
 	#t3 add "project1: task two"
 	#t3 report
 	#------- Projects --------
 	#(0h30m) : project1: task four, task two
 
-def _main():
-	"""Run the CLI Interface for T3"""
-	print('testing')
+def t3Report(inputFile):
+    file = open(inputFile, "r")
+    dateline = file.readline().strip()
+    #TODO, convert number string to human readable date
+    print('------------ ' + dateline + '------------')
+    workingTime = file.readline()
+    print(workingTime)
+    breakTime = file.readline()
+    print(breakTime)
+    
+    #TODO, loop until lines that start with Projects are done, needs to check what line starts with
+    for line in file:
+        print(line)
 
+
+def _main():
+    """Run the CLI Interface for T3"""
+    
+    #tests on example report file, output example in directory is report.txt file
+    t3Report('exampleTimedTasks.txt') 
 if __name__ == '__main__':
 	_main()
