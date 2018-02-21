@@ -19,8 +19,9 @@ import os
 #t3 (r)eport 'date'
 	#print out basic report of the day entered. Default is a week. #TODO: need to decide on a date format
 	#Report is just a clean printout of the tasks and times, can be extended after the fact for graphs and html docs
-
-#Starting and stopping timing
+#t3 (b)reak 'time'
+	#adds amount of time spent on a break to tracking
+#Starting and stopping timingDeplot
 #t3 (o)n/start 'setup project'
 	#starts/adds to time of project, making it the current tracked activity.
 	#OPTIONAL: be able to say how long ago you started the activity so it can add that to the current tracked time
@@ -56,8 +57,23 @@ def t3Report(inputFile):
 
 def _main():
     """Run the CLI Interface for T3"""
+
     
+    #parser
+    parser = argparse.ArgumentParser()
+    parser.add_argument("--add", help="Counts as a working time activity, will be saved under Projects in exampleTimedTasks")
+    parser.add_argument("--delete", help="removes activity when finished from exampleTimedTasks")
+    parser.add_argument("--report", help="prints out basic report of the week by default from exampleTimedTasks")
+    parser.add_argument("--start/on", help="starts,adds time to project, making it the current tracked activity")
+    parser.add_argument("--stop/finish", help="stops timing of project, removes it as the currect tracked activity")
+    parser.add_argument("--break", help="adds time spent on break to exampleTimedTasks")
+    parser.parse_args()
+    print('Run Program as python3 t3.py --help for descriptions of arguments')
+    print('\n')
+    print('Testing of Report Function Below')
+
     #tests on example report file, output example in directory is report.txt file
     t3Report('exampleTimedTasks.txt') 
 if __name__ == '__main__':
 	_main()
+
