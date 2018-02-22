@@ -46,7 +46,7 @@ Full Instructions can be found in GettingStarted.md
 
 Robust Report Command that generates nice CSS, HTML, etc. graphs and charts of time spent on various projects, time wasted, etc. if time permits. 
 
-# FAQ: (Rest of FAQ Can Be Found In The Wiki)
+# [FAQ](https://github.com/j-adamski/OSC-Project-2/wiki): (Rest of FAQ Can Be Found In The Wiki)
 
 Q: Is T3 Open Source?
 
