@@ -2,19 +2,19 @@
 
 T3: Todo List Time Tracker
 
-Mission Statement: To assist those who struggle with time management through a simple, easy to use to do list time tracker
+<b>Mission Statement: </b> To assist those who struggle with time management through a simple, easy to use to do list time tracker
 
-Placeholder for pic: 
+<b>Placeholder for pic: </b>
 TODO
 
-License: 
+<b>License: </b>
 GPL
 
-Installation/Compiling:
+<b>Installation/Compiling:</b>
 Full Instructions can be found in GettingStarted.md
 
 
-<b>Features List/Commands Left To Implement:</b>
+# Features List/Commands Left To Implement:
 
 - t3 (a)dd 'activity'
 	#This counts as a working time activity that will be saved under projects
@@ -22,13 +22,16 @@ Full Instructions can be found in GettingStarted.md
 
 - t3 (d)elete 'activity'
 	#removes activity when finished
+	
+- t3 (e)dit 'activity'
+	#edits the time spent doing the activity	
+
+ - t3 (b)reak 'time'
+	#adds amount of time spent on a break to tracked project
 
 - t3 (r)eport 'date'
 	#print out basic report of the day entered. Default is a week. #TODO: need to decide on a date format
 	#Report is just a basic clean printout of the tasks and times to terminal
-
- - t3 (b)reak 'time'
-	#adds amount of time spent on a break to tracked project
 
 
 <b>Starting and stopping timing</b>
@@ -43,7 +46,7 @@ Full Instructions can be found in GettingStarted.md
 
 Robust Report Command that generates nice CSS, HTML, etc. graphs and charts of time spent on various projects, time wasted, etc. if time permits. 
 
-<b>FAQ: (Rest of FAQ Can Be Found In The Wiki)</b>
+# FAQ: (Rest of FAQ Can Be Found In The Wiki)
 
 Q: Is T3 Open Source?
 
