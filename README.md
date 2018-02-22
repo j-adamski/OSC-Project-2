@@ -13,35 +13,37 @@ GPL
 Installation/Compiling:
 Full Instructions can be found in GettingStarted.md
 
-Features List/Commands Left To Implement:
 
-t3 (a)dd 'activity'
+<b>Features List/Commands Left To Implement:</b>
+
+- t3 (a)dd 'activity'
 	#This counts as a working time activity that will be saved under projects
 	#OPTIONAL: activities that end in 'break' are tagged as break time, allows you to graph time wasted
 
-t3 (d)elete 'activity'
+- t3 (d)elete 'activity'
 	#removes activity when finished
 
-t3 (r)eport 'date'
+- t3 (r)eport 'date'
 	#print out basic report of the day entered. Default is a week. #TODO: need to decide on a date format
 	#Report is just a basic clean printout of the tasks and times to terminal
 
-t3 (b)reak 'time'
+ - t3 (b)reak 'time'
 	#adds amount of time spent on a break to tracked project
 
-Starting and stopping timing
-t3 (s)tart 'setup project'
+
+<b>Starting and stopping timing</b>
+ - t3 (s)tart 'setup project'
 	#starts/adds to time of project, making it the current tracked activity.
 
-t3 (f)inish 'setup project'
+ - t3 (f)inish 'setup project'
 	#saves time of current activity and stops timing it
 
-t3 help 
+ - t3 help 
 	#prints out help dialog
 
 Robust Report Command that generates nice CSS, HTML, etc. graphs and charts of time spent on various projects, time wasted, etc. if time permits. 
 
-FAQ: (Rest of FAQ Can Be Found In The Wiki)
+<b>FAQ: (Rest of FAQ Can Be Found In The Wiki)</b>
 
 Q: Is T3 Open Source?
 
