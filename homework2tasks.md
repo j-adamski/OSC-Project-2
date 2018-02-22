@@ -1,9 +1,6 @@
 # OSC-Project-2
 
 Time Management App
-
-Mission Statement: To assist those who struggle with time management through a simple, easy to use to do list time tracker
-
 Placeholder for pic: TODO
 
 License: GPL
@@ -17,14 +14,14 @@ Installation file called "getting started.md"
 
 - [x] 3: FAQ Page:
     Make a FAQ Section in the README.md file
-    EUNICE IS DOING THIS
+    EUNICE Done
 
-- [X] 4: UML Diagram
+- [ ] 4: UML Diagram
     can be a class diagram, sequence diagram, any type of diagram to see what parts you will need to start code wise
     IRI IS DOING THIS
     
 - [x] 6:Have at least one file that you can show works that shows project has been started. Needs comments that are a breakdown of the work that has been done. Needs an installation script, something that shows work was attempted.
-    THOMAS IS DOING THIS
+    THOMAS Done
 
 DELIVERABLES:
 JPG of IRC conversation. Pull requests that the professor can see that shows we made README changes and code changes.
