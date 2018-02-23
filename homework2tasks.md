@@ -12,7 +12,7 @@ Installation file called "getting started.md"
     **JULIA DONE**
 
 - [x] 2: Contributions.md
-    DONE
+    **DONE**
 
 - [x] 3: FAQ Page:
     Make a FAQ Section in the README.md file.
