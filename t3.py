@@ -8,6 +8,8 @@ import argparse
 import datetime
 import os
 
+import json
+
 #Commands to Implement
 
 #t3 (a)dd 'activity'
@@ -40,19 +42,15 @@ import os
 	#------- Projects --------
 	#(0h30m) : project1: task four, task two
 
-def t3Report(inputFile):
-    file = open(inputFile, "r")
-    dateline = file.readline().strip()
-    #TODO, convert number string to human readable date
-    print('------------ ' + dateline + '------------')
-    workingTime = file.readline()
-    print(workingTime)
-    breakTime = file.readline()
-    print(breakTime)
-    
-    #TODO, loop until lines that start with Projects are done, needs to check what line starts with
-    for line in file:
-        print(line)
+def t3Report():
+    inputFile = 'exampleTasks.txt'
+    jsonData=open(inputFile).read()
+    jsonToPython = json.loads(jsonData)
+
+    #TODO add date section
+    #print('------------ ' + dateline + '------------')
+
+    print(json.dumps(jsonToPython, indent=4, sort_keys=True))
 
 
 def _main():
@@ -63,17 +61,20 @@ def _main():
     parser = argparse.ArgumentParser()
     parser.add_argument("--add", help="Counts as a working time activity, will be saved under Projects in exampleTimedTasks")
     parser.add_argument("--delete", help="removes activity when finished from exampleTimedTasks")
-    parser.add_argument("--report", help="prints out basic report of the week by default from exampleTimedTasks")
+    parser.add_argument("--report", help="prints out basic report of the week by default from exampleTimedTasks",action='store_true', default=False, dest='reportValue',)
     parser.add_argument("--start/on", help="starts,adds time to project, making it the current tracked activity")
     parser.add_argument("--stop/finish", help="stops timing of project, removes it as the currect tracked activity")
     parser.add_argument("--break", help="adds time spent on break to exampleTimedTasks")
-    parser.parse_args()
+    results = parser.parse_args()
     print('Run Program as python3 t3.py --help for descriptions of arguments')
     print('\n')
     print('Testing of Report Function Below')
 
-    #tests on example report file, output example in directory is report.txt file
-    t3Report('exampleTimedTasks.txt') 
+
+    if (results.reportValue) == True:
+        t3Report()
+    #t3Report()
+        #t3Report('exampleTasks.txt')
 if __name__ == '__main__':
 	_main()
 
