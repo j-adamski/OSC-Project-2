@@ -43,7 +43,7 @@ import json
 	#(0h30m) : project1: task four, task two
 
 def t3Report():
-    inputFile = 'exampleTasks.txt'
+    inputFile = 'tasks/exampleTasks.txt'
     jsonData=open(inputFile).read()
     jsonToPython = json.loads(jsonData)
 
@@ -56,7 +56,6 @@ def t3Report():
 def _main():
     """Run the CLI Interface for T3"""
 
-    
     #parser
     parser = argparse.ArgumentParser()
     parser.add_argument("--add", help="Counts as a working time activity, will be saved under Projects in exampleTimedTasks")
@@ -68,7 +67,7 @@ def _main():
     results = parser.parse_args()
     print('Run Program as python3 t3.py --help for descriptions of arguments')
     print('\n')
-    print('Testing of Report Function Below')
+    print('Working Flags for Now Include: --help, --report')
 
 
     if (results.reportValue) == True:
