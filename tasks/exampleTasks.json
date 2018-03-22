@@ -1,18 +1,1 @@
-[
-	{
-		"projectName": "project1",
-		"timeSpent": 23,
-		"completed": true
-	},	
-	{
-		"projectName": "homework3",
-		"timeSpent": 322,
-		"completed": false
-	},
-	{
-		"projectName": "testProject",
-		"timeSpent": 0,
-		"completed": false
-	}
-
-]
+[{"projectName": "homework3", "timeSpent": 322, "completed": false}, {"projectName": "testProject", "timeSpent": "9999", "completed": false}, {"projectName": "EthereumProject", "taskName": "", "timeSpent": 42, "completed": false}, {"projectName": "project1", "taskName": "", "timeSpent": "0", "completed": false}]

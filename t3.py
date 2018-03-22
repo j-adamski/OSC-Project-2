@@ -45,7 +45,7 @@ def t3Add(projectName):
 	#This counts as a working time activity that will be saved under its own project
 
     #new entry structure
-    add_dict = {"projectName": projectName,"taskName": "","timeSpent":42,"completed":False}
+    add_dict = {"projectName": projectName,"taskName": "","timeSpent":0,"completed":False}
 
 
     with open('tasks/exampleTasks.json') as f:
@@ -59,39 +59,41 @@ def t3Add(projectName):
     
 
 
-def t3Delete():
+def t3Delete(projectName):
 	#t3 --delete 'activity'
 	#removes activity when finished
-    print("For testing use project1 as project name")
-    projectName = input("project name to delete: ")
-    with open('tasks/testDelete.json', 'w') as dest_file:
-        with open('tasks/exampleTasks.json', 'r') as source_file:
-            for line in source_file:
-                element = json.loads(line.strip())
-                if projectName in element:
-                    del element[projectName]
-                dest_file.write(json.dumps(element))
+	inputFile = 'tasks/exampleTasks.json'
+	jsonData=open(inputFile).read()
+	data = json.loads(jsonData) 
+	list1=[]
+	for k in data:
+		#print(type(k))
+		if k['projectName'] == projectName:
+			print("Found Project. Deleting.")
+		else:
+			list1.append(k)
+	#print(list1)
+
+	with open('tasks/exampleTasks.json', 'w') as file:
+				file.write(json.dumps(list1))
+
 
 def t3Edit(projectName):
 	#t3 --edit 'projectName'
     #TODO the ability to edit the time of a project
 
-    inputFile = 'tasks/exampleTasks.json'
-    jsonData=open(inputFile).read()
-    jsonToPython = json.loads(jsonData)
-    print("Editing The Time Spent Working On " + jsonToPython['projectName'])
-    newTime = input("Enter New Time for Project: ")
-    jsonToPython['timeSpent'] = newTime
-    print(jsonToPython['timeSpent'])
+	inputFile = 'tasks/exampleTasks.json'
+	jsonData=open(inputFile).read()
+	data = json.loads(jsonData) 
 
-    for k in jsonToPython:
-    	if (k['projectName'] == projectName):
-    		print(jsonToPython['timeSpent'])
+	for k in data:
+	    if projectName == k['projectName']:
+	    	print("Current Time Is: " + str(k['timeSpent']))
+	    	newTime = input("Enter New Time: ")
+	    	k['timeSpent'] = newTime
 
-    	#print("Projects: ",k['projectName'])
-    	#print("Time Spent: ", k['timeSpent'])
-    	#print("Completed (T/F): ",k['completed'])
-
+	with open('tasks/exampleTasks.json', 'w') as f:
+	    json.dump(data, f)
 
 
 def _main():
@@ -122,12 +124,11 @@ def _main():
         t3Add(results.printme)
         print(results.printme + " was added successfully")
     if (results.deleteValue) == True:
-        t3Delete()
+        t3Delete(results.printme)
+        print(results.printme + " was deleted successfully")
     if (results.editValue) == True:
-        t3Edit()
-    
-    #print something if edit,add,delete,etc. wasn't specified
-    print(results.printme)
+        t3Edit(results.printme)
+        print(results.printme + " was edited successfully")
 
     #t3Report()
         #t3Report('exampleTasks.txt')
