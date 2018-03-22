@@ -1,6 +1,4 @@
-# OSC-Project-2
-
-T3: Todo List Time Tracker
+# T3: Todo List Time Tracker
 
 <b>Mission Statement: </b> To assist those who struggle with time management through a simple, easy to use to do list time tracker
 
@@ -8,10 +6,10 @@ T3: Todo List Time Tracker
 TODO
 
 <b>License: </b>
-GPL
+GPL 3.0 
 
 <b>Installation/Compiling:</b>
-Full Instructions can be found in GettingStarted.md
+Full Instructions can be found in [GettingStarted.md](https://github.com/j-adamski/T3-Todo-List-Time-Tracker/blob/master/GettingStarted.md)
 
 
 # Features List/Commands Left To Implement:
