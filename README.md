@@ -14,32 +14,32 @@ Full Instructions can be found in [GettingStarted.md](https://github.com/j-adams
 
 # Features List/Commands Left To Implement:
 
-- t3 --add 'project name'
+- `python t3.py --add 'project name'`
 	#This counts as a working time activity that will be saved under projects
 	#OPTIONAL: activities that end in 'break' are tagged as break time, allows you to graph time wasted
 
-- t3 --delete 'project name'
+- `python t3.py --delete 'project name'`
 	#removes activity when finished
 	
-- t3 --edit 'project name'
+- `python t3.py --edit 'project name'`	
 	#edits the time spent doing the activity	
 
- - t3 --break 'time'
+ - `python t3.py --break 'time'`
 	#adds amount of time spent on a break to tracked project
 
-- t3 --report 'date'
+- `python t3.py --report 'date'`
 	#print out basic report of the day entered. Default is a week. #TODO: need to decide on a date format
 	#Report is just a basic clean printout of the tasks and times to terminal
 
 
 <b>Starting and stopping timing</b>
- - t3 --start 'project name'
+ - `python t3.py --start 'project name'`
 	#starts/adds to time of project, making it the current tracked activity.
 
- - t3 --finish 'project name'
+ - `python t3.py --finish 'project name'`
 	#saves time of current activity and stops timing it
 
- - t3 --help 
+ - `python t3.py --help `
 	#prints out help dialog
 
 Robust Report Command that generates nice CSS, HTML, etc. graphs and charts of time spent on various projects, time wasted, etc. if time permits. 
