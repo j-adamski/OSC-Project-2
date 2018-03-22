@@ -2,7 +2,6 @@
 import argparse
 
 """time tracker and to do list, T3. Todo list where you can add your tasks, keep track of how long you have been working on them, and save your output to a text file for additional scripting"""
-
 """T3 is to assist those who struggle with time management through a simple, easy to use to do list time tracker """
 
 import datetime
@@ -10,7 +9,6 @@ import os
 import json
 
 #Commands to Implement
-
 #t3 (b)reak 'time'
 	#adds amount of time spent on a break to tracking
 #t3 (o)n/start 'setup project'
@@ -19,17 +17,15 @@ import json
 #t3 (f)inish/stop 'setup project'
 	#saves time of current activity and stops timing it
 	#TODO: finish can be swapped to stop or something else
-
 #adding multiple tasks under one project:
 	#Parse any non whitespace string followed by a colon as a project, anything after it is a task within that project
 	#t3 add "project1: task four"
 
 def t3Report():
-	#t3 (r)eport
-	#print out basic report of the week
-	#Report is just a clean printout of the tasks and times, can be extended after the fact for graphs and html docs
-	#TODO add date section
-	#TODO make report printout cleaner
+	#t3 --report 'date' 
+	#(currently defaults to entire file, timing is not implemented yet)
+	#print out basic report
+	#TODO add date section when timing is implemented
     inputFile = 'tasks/exampleTasks.json'
     jsonData=open(inputFile).read()
     jsonToPython = json.loads(jsonData) 
@@ -47,22 +43,20 @@ def t3Report():
 def t3Add(projectName):
 	#t3 --add 'activity'
 	#This counts as a working time activity that will be saved under its own project
-    inputFile = 'tasks/exampleTasks.json'
-    jsonData=open(inputFile).read()
-    jsonToPython = json.loads(jsonData)
-    
-    #TODO: add task functionality
 
     #new entry structure
-    add_dict = {projectName: [{
-        "taskName": "","timeSpent":0,"completed":False}]}
-    jsonToPython.update(add_dict)
-    
-    #test file to write to while testing
-    #with open('tasks/test.json', 'w') as f:
+    add_dict = {"projectName": projectName,"taskName": "","timeSpent":42,"completed":False}
+
+
+    with open('tasks/exampleTasks.json') as f:
+        data = json.load(f)
+
+    data.append(add_dict)
 
     with open('tasks/exampleTasks.json', 'w') as f:
-        json.dump(jsonToPython,f)
+        json.dump(data, f)
+    #TODO: add task functionality
+    
 
 
 def t3Delete():
@@ -78,15 +72,25 @@ def t3Delete():
                     del element[projectName]
                 dest_file.write(json.dumps(element))
 
-def t3Edit():
+def t3Edit(projectName):
+	#t3 --edit 'projectName'
     #TODO the ability to edit the time of a project
-    print("Not implemented")
-    print("edits the time spent doing the activity")
+
     inputFile = 'tasks/exampleTasks.json'
     jsonData=open(inputFile).read()
     jsonToPython = json.loads(jsonData)
-    #projectName = input("Project Name To Edit Time Of: ")
-    
+    print("Editing The Time Spent Working On " + jsonToPython['projectName'])
+    newTime = input("Enter New Time for Project: ")
+    jsonToPython['timeSpent'] = newTime
+    print(jsonToPython['timeSpent'])
+
+    for k in jsonToPython:
+    	if (k['projectName'] == projectName):
+    		print(jsonToPython['timeSpent'])
+
+    	#print("Projects: ",k['projectName'])
+    	#print("Time Spent: ", k['timeSpent'])
+    	#print("Completed (T/F): ",k['completed'])
 
 
 
@@ -114,6 +118,7 @@ def _main():
     if (results.reportValue) == True:
         t3Report()
     if (results.addValue) == True:
+        #t3Add(results.printme)
         t3Add(results.printme)
         print(results.printme + " was added successfully")
     if (results.deleteValue) == True:
