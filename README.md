@@ -46,7 +46,8 @@ Robust Report Command that generates nice CSS, HTML, etc. graphs and charts of t
 
 # [FAQ](https://github.com/j-adamski/OSC-Project-2/wiki): (Rest of FAQ Can Be Found In The Wiki)
 
-Below are some of the questions we have answered more can be found on the wiki tab. If any questions are not answered please contact us through our public IRC Chat and we will answer your question as soon as possible
+Below are some of the questions we have answered more can be found on the wiki tab. If any questions are not answered please contact us through our public IRC Chat and we will answer your questions as soon as possible. 
+
 Q: Is T3 Open Source?
 
     Yes, T3 is licensed under the GPL and created by students at Loyola University Chicato attending the Open Source Computing Class
