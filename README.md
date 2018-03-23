@@ -6,7 +6,7 @@
 TODO
 
 <b>License: </b>
-GPL 3.0 
+GPL 3.0
 
 <b>Installation/Compiling:</b>
 Full Instructions can be found in [GettingStarted.md](https://github.com/j-adamski/T3-Todo-List-Time-Tracker/blob/master/GettingStarted.md)
@@ -20,9 +20,9 @@ Full Instructions can be found in [GettingStarted.md](https://github.com/j-adams
 
 - `python t3.py --delete 'project name'`
 	#removes activity when finished
-	
-- `python t3.py --edit 'project name'`	
-	#edits the time spent doing the activity	
+
+- `python t3.py --edit 'project name'`
+	#edits the time spent doing the activity
 
  - `python t3.py --break 'time'`
 	#adds amount of time spent on a break to tracked project
@@ -42,10 +42,11 @@ Full Instructions can be found in [GettingStarted.md](https://github.com/j-adams
  - `python t3.py --help `
 	#prints out help dialog
 
-Robust Report Command that generates nice CSS, HTML, etc. graphs and charts of time spent on various projects, time wasted, etc. if time permits. 
+Robust Report Command that generates nice CSS, HTML, etc. graphs and charts of time spent on various projects, time wasted, etc. if time permits.
 
 # [FAQ](https://github.com/j-adamski/OSC-Project-2/wiki): (Rest of FAQ Can Be Found In The Wiki)
 
+Below are some of the questions we have answered more can be found on the wiki tab. If any questions are not answered please contact us through our public IRC Chat and we will answer your question as soon as possible
 Q: Is T3 Open Source?
 
     Yes, T3 is licensed under the GPL and created by students at Loyola University Chicato attending the Open Source Computing Class
@@ -58,5 +59,3 @@ Q: Where can I talk about development of T3?
 
     The IRC Channel on Freenode can be joined with the following command:
     /join ##T3Comp412
-
-
