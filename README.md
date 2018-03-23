@@ -1,6 +1,6 @@
 # T3: Todo List Time Tracker
 
-<b>Mission Statement: </b> To assist those who struggle with time management through a simple, easy to use to do list time tracker
+<b>Mission Statement: </b> To assist those who struggle with time management through a simple, easy to use, to do list time tracker.
 
 <b>Placeholder for pic: </b>
 TODO
@@ -49,7 +49,7 @@ Robust Report Command that generates nice CSS, HTML, etc. graphs and charts of t
 Below are some of the questions we have answered more can be found on the wiki tab. If any questions are not answered please contact us through our public IRC Chat and we will answer your question as soon as possible
 Q: Is T3 Open Source?
 
-    Yes, T3 is licensed under the GPL and created by students at Loyola University Chicato attending the Open Source Computing Class
+    Yes, T3 is licensed under the GPL and created by students at Loyola University Chicago attending the Open Source Computing Class
 
 Q: When was T3 started?
 
