@@ -56,7 +56,7 @@ Q: When was T3 started?
 
 Q: Where can I talk about development of T3?
 
-    The IRC Chanel on Freenode can be joined with the following command:
+    The IRC Channel on Freenode can be joined with the following command:
     /join ##T3Comp412
 
 
