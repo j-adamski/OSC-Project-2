@@ -1,0 +1,21 @@
+Functions Left For Homework 3:
+t3 add activity - DONE: Thomas
+t3 delete activity - DONE: THOMAS
+t3 edit activity - DONE: THOMAS
+t3.py report - DONE: Thomas
+t3 start projectName - TODO: Thomas 
+
+Functionality Left:
+    Add Tasks to the t3Add Function: TODO: Thomas
+    Write Test Cases: TODO: 
+    Implement Timing: TODO: Thomas 
+
+
+Picture/Logo - TODO: Prachi 
+Graph Output? - TODO: Iri
+Creating Github Pages site for project: TODO:
+Presentation Related:
+    Creating Presentation Powerpoint: - TODO:
+    Presentation Talking: - TODO:
+    Answering Questions About Code After Presentation: Thomas
+Remove all mentions of Break from documentation, it serves the same purpose as the edit function: TODO:

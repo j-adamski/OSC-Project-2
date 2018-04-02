@@ -13,10 +13,8 @@ import json
 	#adds amount of time spent on a break to tracking
 #t3 (o)n/start 'setup project'
 	#starts/adds to time of project, making it the current tracked activity.
-	#OPTIONAL: be able to say how long ago you started the activity so it can add that to the current tracked time
 #t3 (f)inish/stop 'setup project'
 	#saves time of current activity and stops timing it
-	#TODO: finish can be swapped to stop or something else
 #adding multiple tasks under one project:
 	#Parse any non whitespace string followed by a colon as a project, anything after it is a task within that project
 	#t3 add "project1: task four"
