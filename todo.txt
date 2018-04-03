@@ -13,7 +13,7 @@ Functionality Left:
 
 Picture/Logo - TODO: Prachi 
 Graph Output? - TODO: Iri
-Creating Github Pages site for project: TODO:
+Creating Github Pages site for project: TODO:Prachi
 Presentation Related:
     Creating Presentation Powerpoint: - TODO:
     Presentation Talking: - TODO:
