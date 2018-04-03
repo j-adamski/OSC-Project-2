@@ -1,4 +1,4 @@
-Functions Left For Homework 3:
+Functions Left To Implement:
 t3 add activity - DONE: Thomas
 t3 delete activity - DONE: THOMAS
 t3 edit activity - DONE: THOMAS
