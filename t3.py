@@ -1,43 +1,40 @@
 #!/usr/bin/env python
 import argparse
-
-"""time tracker and to do list, T3. Todo list where you can add your tasks, keep track of how long you have been working on them, and save your output to a text file for additional scripting"""
-"""T3 is to assist those who struggle with time management through a simple, easy to use to do list time tracker """
-
+import time
 import datetime
 import os
 import json
 
-#Commands to Implement
-#t3 (b)reak 'time'
-	#adds amount of time spent on a break to tracking
-#t3 (o)n/start 'setup project'
-	#starts/adds to time of project, making it the current tracked activity.
-#t3 (f)inish/stop 'setup project'
-	#saves time of current activity and stops timing it
-#adding multiple tasks under one project:
-	#Parse any non whitespace string followed by a colon as a project, anything after it is a task within that project
-	#t3 add "project1: task four"
+"""time tracker and to do list, T3. Todo list where you can add your tasks, keep track of how long you have been working on them, and save your output to a text file for additional scripting"""
+"""T3 is to assist those who struggle with time management through a simple, easy to use to do list time tracker """
 
-def t3Report():
-	#t3 --report 'date' 
-	#(currently defaults to entire file, timing is not implemented yet)
-	#print out basic report
-	#TODO add date section when timing is implemented
+def t3Report(userChoice):
+	#t3 --report active/completed/all
+	#(currently defaults to active, which prints out only those projects not marked completed. completed prints out only completed projects. all prints out the entire json file.
+    #print out basic report
+
     inputFile = 'tasks/exampleTasks.json'
     jsonData=open(inputFile).read()
     jsonToPython = json.loads(jsonData) 
+    
+    if userChoice == 'active':
+        for k in jsonToPython:
+            if k['completed'] == True:
+    	        print("Projects: ",k['projectName'])
+    	        print("Time Spent: ", k['timeSpent'])
+    elif userChoice == 'completed':
+        for k in jsonToPython:
+            if k['completed'] == False:
+                print("Projects: ",k['projectName'])
+                print("Time Spent: ", k['timeSpent'])
+    elif userChoice == 'all':
+        for k in jsonToPython:
+    	    print("Projects: ",k['projectName'])
+    	    print("Time Spent: ", k['timeSpent'])
+    	    print("Completed (T/F): ",k['completed'])
 
-    #print statement to dump an entire json file   
-    #print(json.dumps(jsonToPython, indent=4, sort_keys=True))
-
-    #iterates through Projects and reports on their status
-    for k in jsonToPython:
-    	print("Projects: ",k['projectName'])
-    	print("Time Spent: ", k['timeSpent'])
-    	print("Completed (T/F): ",k['completed'])
-
-
+    else:
+        print("Invalid Option. Choose active/completed/all")
 def t3Add(projectName):
 	#t3 --add 'activity'
 	#This counts as a working time activity that will be saved under its own project
@@ -79,7 +76,7 @@ def t3Delete(projectName):
 def t3Edit(projectName):
 	#t3 --edit 'projectName'
     #TODO the ability to edit the time of a project
-
+    #needs to be able to check that user input the correct format
 	inputFile = 'tasks/exampleTasks.json'
 	jsonData=open(inputFile).read()
 	data = json.loads(jsonData) 
@@ -93,6 +90,43 @@ def t3Edit(projectName):
 	with open('tasks/exampleTasks.json', 'w') as f:
 	    json.dump(data, f)
 
+def t3Start(projectName):
+    #t3 --start 'projectName'
+    inputFile = 'tasks/timingExample.json'
+    jsonData=open(inputFile).read()
+    data = json.loads(jsonData)
+
+    for k in data:
+        if projectName == k['projectName']:
+            print("Project Time Has Started")
+            #currentTime = datetime.datetime.now().strftime('%H%M')
+            k['timeStamp'] = time.time()
+    with open('tasks/timingExample.json', 'w') as f:
+        json.dump(data, f)
+
+def t3Stop(projectName):
+    #t3 -- stop 'projectName'
+    inputFile = 'tasks/timingExample.json'
+    jsonData=open(inputFile).read()
+    data = json.loads(jsonData)
+
+    for k in data:
+        if projectName == k['projectName']:
+            #check to make sure there is a timestamp
+            if k['timeStamp'] == '':
+                print("Project has no start time, is not being tracked")
+                break
+            print("Project Time Has Stopped, Tracked Time Updated")
+            elapsedTime = time.time() - k['timeStamp']
+            #TODO change it from seconds to something cleaner looking
+            print("Elapsed Time For Project: " + str(elapsedTime) + ' seconds')
+            k['timeSpent'] = elapsedTime
+            #reset the timestamp from json file
+            k['timeStamp'] = ''
+    with open('tasks/timingExample.json', 'w') as f:
+        json.dump(data, f)
+
+
 
 def _main():
 
@@ -105,9 +139,8 @@ def _main():
     parser.add_argument("--add",help="Counts as a working time activity, will be saved under Projects in exampleTimedTasks",action='store_true', default=False, dest='addValue')
     parser.add_argument("--delete", help="removes activity when finished from exampleTimedTasks",action='store_true',default=False,dest='deleteValue')
     parser.add_argument("--report", help="prints out basic report of the week by default from exampleTimedTasks",action='store_true', default=False, dest='reportValue',)
-    parser.add_argument("--start/on", help="starts,adds time to project, making it the current tracked activity")
-    parser.add_argument("--stop/finish", help="stops timing of project, removes it as the currect tracked activity")
-    parser.add_argument("--break", help="adds time spent on break to exampleTimedTasks")
+    parser.add_argument("--start", help="starts timing project worktime, will overwrite existing start time if there is one.",action='store_true',default=False,dest='startValue')
+    parser.add_argument("--stop/finish", help="stops timing of project, removes that projects start time timestamp and updates the timeSpent variable",action='store_true',default=False,dest='stopValue')
     parser.add_argument("--edit",help="edits the time spent on a project", action='store_true',default=False,dest="editValue")
     results = parser.parse_args()
     print('Run Program as python3 t3.py --help for descriptions of arguments')
@@ -116,17 +149,18 @@ def _main():
 
 
     if (results.reportValue) == True:
-        t3Report()
+        t3Report(results.printme)
     if (results.addValue) == True:
         #t3Add(results.printme)
         t3Add(results.printme)
-        print(results.printme + " was added successfully")
     if (results.deleteValue) == True:
         t3Delete(results.printme)
-        print(results.printme + " was deleted successfully")
     if (results.editValue) == True:
         t3Edit(results.printme)
-        print(results.printme + " was edited successfully")
+    if (results.startValue) == True:
+        t3Start(results.printme)
+    if (results.stopValue) == True:
+        t3Stop(results.printme)
 
     #t3Report()
         #t3Report('exampleTasks.txt')

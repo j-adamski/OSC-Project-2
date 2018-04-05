@@ -1,21 +1,23 @@
 Functions Left To Implement:
 t3 add activity - DONE: Thomas
-t3 delete activity - DONE: THOMAS
-t3 edit activity - DONE: THOMAS
+t3 delete activity - DONE: Thomas
+t3 edit activity - DONE: Thomas
 t3.py report - DONE: Thomas
-t3 start projectName - TODO: Thomas 
+t3 start projectName - DONE: Thomas 
+t3 stop projectName - DONE: Thomas
 
 Functionality Left:
     Add Tasks to the t3Add Function: TODO: Thomas
-    Write Test Cases: TODO: 
-    Implement Timing: TODO: Thomas 
+    Write Test Cases: TODO: ???
+    Implement Timing: DONE: Thomas
 
 
 Picture/Logo - TODO: Prachi 
-Graph Output? - TODO: Iri
+Graph Output?Other? - TODO: Iri
 Creating Github Pages site for project: TODO:Prachi
 Presentation Related:
-    Creating Presentation Powerpoint: - TODO:
-    Presentation Talking: - TODO:
+    Creating Presentation Powerpoint: - TODO: ???
+    Presentation Talking: - TODO: ???
     Answering Questions About Code After Presentation: Thomas
-Remove all mentions of Break from documentation, it serves the same purpose as the edit function: TODO:
+Remove all mentions of Break from documentation, it serves the same purpose as the edit function: TODO: ???
+Update documentation to reflect how the functions now work. Report, add, start and stop were changed slightly - TODO: ???
