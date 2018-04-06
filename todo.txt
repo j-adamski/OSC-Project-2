@@ -8,7 +8,7 @@ t3 stop projectName - DONE: Thomas
 
 Functionality Left:
     Add Tasks to the t3Add Function: TODO: Thomas
-    Write Test Cases: TODO: ???
+    Write Test Cases: TODO: Julia
     Implement Timing: DONE: Thomas
 
 
