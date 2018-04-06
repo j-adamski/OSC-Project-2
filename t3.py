@@ -8,11 +8,25 @@ import json
 """time tracker and to do list, T3. Todo list where you can add your tasks, keep track of how long you have been working on them, and save your output to a text file for additional scripting"""
 """T3 is to assist those who struggle with time management through a simple, easy to use to do list time tracker """
 
+def t3Complete(projectName):
+    #t3 --complete 'activity'
+    inputFile = 'tasks/tasks.json'
+    jsonData=open(inputFile).read()
+    data = json.loads(jsonData) 
+
+    for k in data:
+        if projectName == k['projectName']:
+            k['completed'] = True
+
+    with open('tasks/tasks.json', 'w') as f:
+        json.dump(data, f)
+
+
 def t3Report(userChoice):
     #t3 --report active/completed/all
     #active prints out current projects
-        #completed prints out only completed projects
-        #all prints out the entire json file
+    #completed prints out only completed projects
+    #all prints out the entire json file
 
     inputFile = 'tasks/tasks.json'
     jsonData=open(inputFile).read()
@@ -135,6 +149,7 @@ def _main():
     parser.add_argument('printme', help="the user input, to be printed if there are not argument flags")
     
     parser.add_argument("--add",help="Counts as a working time activity, will be saved under Projects in exampleTimedTasks",action='store_true', default=False, dest='addValue')
+    parser.add_argument("--complete",help="Marks project as completed",action="store_true",default=False,dest="completeValue")
     parser.add_argument("--delete", help="removes activity when finished from exampleTimedTasks",action='store_true',default=False,dest='deleteValue')
     parser.add_argument("--report", help="prints out basic report of the week by default from exampleTimedTasks",action='store_true', default=False, dest='reportValue',)
     parser.add_argument("--start", help="starts timing project worktime, will overwrite existing start time if there is one.",action='store_true',default=False,dest='startValue')
@@ -149,6 +164,8 @@ def _main():
     if (results.addValue) == True:
         #t3Add(results.printme)
         t3Add(results.printme)
+    if (results.completeValue) == True:
+        t3Complete(results.printme)
     if (results.deleteValue) == True:
         t3Delete(results.printme)
     if (results.editValue) == True:
