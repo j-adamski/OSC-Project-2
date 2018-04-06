@@ -14,31 +14,31 @@ Full Instructions can be found in [GettingStarted.md](https://github.com/j-adams
 
 # Features List/Commands Left To Implement:
 
-- `python t3.py --add 'project name'`
+- `python3 t3.py --add 'project name'`
 	#Adds a new project
 
-- `python t3.py --complete 'project name'`
+- `python3 t3.py --complete 'project name'`
 	#Marks project as completed
 
-- `python t3.py --delete 'project name'`
+- `python3 t3.py --delete 'project name'`
 	#Deletes project from file
 
-- `python t3.py --edit 'project name'`
+- `python3 t3.py --edit 'project name'`
 	#Edits the time spent doing the activity
 
-- `python t3.py --report 'active/completed/all'`
+- `python3 t3.py --report 'active/completed/all'`
 	#Active prints out current projects. Completed prints out completed projects. All prints out the entire json file.
     #Report is just a basic clean printout of the tasks and times to terminal
 
 
 <b>Starting and stopping timing</b>
- - `python t3.py --start 'project name'`
+ - `python3 t3.py --start 'project name'`
 	#Creates or overwrites the time stamp of the project
 
- - `python t3.py --stop 'project name'`
+ - `python3 t3.py --stop 'project name'`
 	#Updates run time of current activity and stops timing it
 
- - `python t3.py --help `
+ - `python3 t3.py --help `
 	#prints out help dialog
 
 Robust Report Command that generates nice CSS, HTML, etc. graphs and charts of time spent on various projects, time wasted, etc. if time permits.
