@@ -10,7 +10,7 @@ long_description = (
 
 setup(
 	name='t3',
-	version="0.2",
+	version="0.8",
 	author="comp412GroupProject",
 	author_email='thatzopoulos@luc.edu',
         description=description,
