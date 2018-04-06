@@ -129,7 +129,6 @@ def t3Stop(projectName):
             print("Project Time Has Stopped, Tracked Time Updated")
             elapsedTime = time.time() - k['timeStamp']
             #add new time to current overall project time
-            #TODO check what happens with a blank timespent
             currentProjectTime = k['timeSpent']
             overallProjectTime = currentProjectTime + elapsedTime
             k['timeSpent'] = overallProjectTime
@@ -146,7 +145,7 @@ def _main():
     #parser
     parser = argparse.ArgumentParser()
     
-    parser.add_argument('printme', help="the user input, to be printed if there are not argument flags")
+    parser.add_argument('userParserInput', help="the user input, will be printed if there are no arguments")
     
     parser.add_argument("--add",help="Counts as a working time activity, will be saved under Projects in exampleTimedTasks",action='store_true', default=False, dest='addValue')
     parser.add_argument("--complete",help="Marks project as completed",action="store_true",default=False,dest="completeValue")
@@ -160,20 +159,20 @@ def _main():
 
 
     if (results.reportValue) == True:
-        t3Report(results.printme)
+        t3Report(results.userParserInput)
     if (results.addValue) == True:
-        #t3Add(results.printme)
-        t3Add(results.printme)
+        #t3Add(results.userParserInput)
+        t3Add(results.userParserInput)
     if (results.completeValue) == True:
-        t3Complete(results.printme)
+        t3Complete(results.userParserInput)
     if (results.deleteValue) == True:
-        t3Delete(results.printme)
+        t3Delete(results.userParserInput)
     if (results.editValue) == True:
-        t3Edit(results.printme)
+        t3Edit(results.userParserInput)
     if (results.startValue) == True:
-        t3Start(results.printme)
+        t3Start(results.userParserInput)
     if (results.stopValue) == True:
-        t3Stop(results.printme)
+        t3Stop(results.userParserInput)
 
 if __name__ == '__main__':
     _main()

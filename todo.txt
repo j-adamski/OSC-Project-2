@@ -19,5 +19,3 @@ Presentation Related:
     Creating Presentation Powerpoint: - TODO: ???
     Presentation Talking: - TODO: ???
     Answering Questions About Code After Presentation: Thomas
-Remove all mentions of Break from documentation, it serves the same purpose as the edit function: TODO: ???
-Update documentation to reflect how the functions now work. Report, add, start and stop were changed slightly - TODO: ???
