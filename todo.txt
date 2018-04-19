@@ -17,13 +17,10 @@ Packaging for Linux: TODO Thomas
     ADD to README and Github Pages site how to use the binary package. Examples under ASCIINEMA and tabler from Maria's email. Include download links to linux package as well as Binary package on pages site.: TODO ???
 Clean up and expand the README now that the code is finished. Include screenshots if needed: TODO ???
 Picture/Logo - TODO: Prachi 
-<<<<<<< HEAD
-Creating Github Pages site for project: TODO:Prachi
-    Flesh out Github Pages, add logo etc:
-=======
+Flesh out Github Pages, add logo etc:
 Graph Output?Other? - TODO: Iri
 Creating Github Pages site for project: DONE: Eunice
->>>>>>> 59ce22f329aec5277fa705e8938c219cc61138a9
+
 Presentation Related:
     Creating Presentation Powerpoint: - TODO: ???
     Presentation Talking: - TODO: ???
