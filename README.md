@@ -5,7 +5,8 @@ To assist those who struggle with time management through a simple, easy to use,
 
 <b>Visit our webpage for more details </b>
 Click on image
-[![T3-Todo-List-Time-Tracker](https://j-adamski.github.io/T3-Todo-List-Time-Tracker/)
+[![T3-Todo-List-Time-Tracker] (https://j-adamski.github.io/T3-Todo-List-Time-Tracker/)]
+(https://j-adamski.github.io/T3-Todo-List-Time-Tracker/)
 
 <b>License: </b>
 GPL 3.0
