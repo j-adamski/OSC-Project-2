@@ -1,9 +1,11 @@
 # T3: Todo List Time Tracker
 
-<b>Mission Statement: </b> To assist those who struggle with time management through a simple, easy to use, to do list time tracker.
+<b>Mission Statement: </b>
+To assist those who struggle with time management through a simple, easy to use, to do list time tracker.
 
-<b>Placeholder for pic: </b>
-TODO
+<b>Visit our webpage for more details </b>
+Click on image
+[![T3-Todo-List-Time-Tracker](https://j-adamski.github.io/T3-Todo-List-Time-Tracker/)
 
 <b>License: </b>
 GPL 3.0
@@ -45,7 +47,7 @@ Robust Report Command that generates nice CSS, HTML, etc. graphs and charts of t
 
 # [FAQ](https://github.com/j-adamski/OSC-Project-2/wiki): (Rest of FAQ Can Be Found In The Wiki)
 
-Below are some of the questions we have answered more can be found on the wiki tab. If any questions are not answered please contact us through our public IRC Chat and we will answer your questions as soon as possible. 
+Below are some of the questions we have answered more can be found on the wiki tab. If any questions are not answered please contact us through our public IRC Chat and we will answer your questions as soon as possible.
 
 Q: Is T3 Open Source?
 

@@ -3,7 +3,7 @@ t3 add activity - DONE: Thomas
 t3 delete activity - DONE: Thomas
 t3 edit activity - DONE: Thomas
 t3.py report - DONE: Thomas
-t3 start projectName - DONE: Thomas 
+t3 start projectName - DONE: Thomas
 t3 stop projectName - DONE: Thomas
 
 Functionality Left:
@@ -15,8 +15,8 @@ Functionality Left:
 Packaging for Linux: TODO Thomas
     tar.gz file for linux and binary packaging with WHL
     ADD to README and Github Pages site how to use the binary package. Examples under ASCIINEMA and tabler from Maria's email. Include download links to linux package as well as Binary package on pages site.: TODO ???
-Clean up and expand the README now that the code is finished. Include screenshots if needed: TODO ???
-Picture/Logo - TODO: Prachi 
+Clean up and expand the README now that the code is finished. Include screenshots if needed: TODO: Eunice
+Picture/Logo - TODO: Prachi
 Flesh out Github Pages, add logo etc:
 Graph Output?Other? - TODO: Iri
 Creating Github Pages site for project: DONE: Eunice
