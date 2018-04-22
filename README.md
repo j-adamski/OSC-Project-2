@@ -3,10 +3,9 @@
 <b>Mission Statement: </b>
 To assist those who struggle with time management through a simple, easy to use, to do list time tracker.
 
-<b>Visit our webpage for more details </b>
-Click on image
-[![T3-Todo-List-Time-Tracker](WebStyle/webpage.png)]
-(https://j-adamski.github.io/T3-Todo-List-Time-Tracker/)
+<b>Visit our webpage by clicking on the image</b>
+
+[![T3-Todo-List-Time-Tracker](https://user-images.githubusercontent.com/31542650/39089914-c188bc1a-4596-11e8-906e-a37686309467.png)](https://j-adamski.github.io/T3-Todo-List-Time-Tracker/)
 
 <b>License: </b>
 GPL 3.0
