@@ -94,8 +94,9 @@ def t3Edit(projectName):
     for k in data:
         if projectName == k['projectName']:
             print("Current Time Is: " + str(k['timeSpent']))    
-            newTime = input("Enter New Time In Seconds: ")
-            k['timeSpent'] = float(newTime)
+            newTime = input("Enter New Time In Minutes: ")
+            #Converts user input of minutes to seconds
+            k['timeSpent'] = float(newTime*60)
 
     with open('tasks/tasks.json', 'w') as f:
         json.dump(data, f)
