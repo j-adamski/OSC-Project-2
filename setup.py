@@ -10,7 +10,7 @@ long_description = (
 
 setup(
 	name='t3',
-	version="0.8",
+	version="1.1.0.dev1",
 	author="comp412GroupProject",
 	author_email='thatzopoulos@luc.edu',
         description=description,
@@ -23,6 +23,10 @@ setup(
 			't3 = t3:_main',
 			],
 	},
+        project_urls={
+            'Documentation': 'https://github.com/j-adamski/T3-Todo-List-Time-Tracker/blob/master/README.md',
+            },
+        python_requires='>=3',
 
 )
 
