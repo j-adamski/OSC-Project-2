@@ -35,8 +35,9 @@ Delete Project:
 
 
 Print report of completed projects:
+```
     python3 t3.py --report completed
-You can specigy report to only output completed projects or active projects as well by changing the report flag. See the below help command for all options.
+```
 
 Print help dialog: 
 ```
@@ -57,7 +58,8 @@ Available Options:
 * `--edit` - Edits the time spent on a project in minutes
 
 
-## [FAQ](https://github.com/j-adamski/OSC-Project-2/wiki): (FAQ Can Be Found In The Wiki)
+## Wiki/FAQ:
+FAQ can be located in the [wiki](https://github.com/j-adamski/OSC-Project-2/wiki)
 
 
 ## Contribution Guidelines
