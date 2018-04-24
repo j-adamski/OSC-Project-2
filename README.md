@@ -9,8 +9,11 @@ Keep up to date with release announcements and updates by joining our IRC channe
 <b>Mission Statement: </b>
 To assist those who struggle with time management through a simple, easy to use, to do list time tracker.
 
-<b>Installation/Compiling:</b>
+## Installation/Compiling:
 Full Instructions can be found in [our Getting Started Guide](https://github.com/j-adamski/T3-Todo-List-Time-Tracker/blob/master/GettingStarted.md)
+```
+sudo python3 setup.py install
+```
 
 ## Quick Intro:
 Add your first project:
