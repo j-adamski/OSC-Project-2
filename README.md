@@ -64,7 +64,7 @@ FAQ can be located in the [wiki](https://github.com/j-adamski/OSC-Project-2/wiki
 
 ## Contribution Guidelines
 
-If you want to contribute to T3, review the [contribution guidelines.](https://github.com/j-adamski/T3-Todo-List-Time-Tracker/Contribution.md) This project also adhere's to the T3 [code of conduct.](https://github.com/j-adamski/T3-Todo-List-Time-Tracker/CODE_OF_CONDUCT.md) All contributers are expected to adhere to this code at all times.
+If you want to contribute to T3, review the [contribution guidelines.](https://github.com/j-adamski/T3-Todo-List-Time-Tracker/blob/master/Contribution.md) This project also adhere's to the T3 [code of conduct.](https://github.com/j-adamski/T3-Todo-List-Time-Tracker/blob/master/CODE_OF_CONDUCT.md) All contributers are expected to adhere to this code at all times.
 
 ## Visit our Website:
 [![T3-Todo-List-Time-Tracker](https://user-images.githubusercontent.com/31542650/39089914-c188bc1a-4596-11e8-906e-a37686309467.png)](https://j-adamski.github.io/T3-Todo-List-Time-Tracker/)
