@@ -31,7 +31,7 @@ Mark Project as completed:
 Delete Project:
 ```
     python3 t3.py --delete FirstProject
-    ```
+```
 
 
 Print report of completed projects:
