@@ -1,33 +1,18 @@
+import cv2
 import numpy as np
-import matplotlib.pyplot as plt
-from mpl_toolkits.mplot3d import Axes3D
-import matplotlib.tri as mtri
 
-fig = plt.figure(figsize=plt.figaspect(0.5))
-n_angles = 36
-n_radii = 8
-min_radius = 0.25
-radii = np.linspace(min_radius, 0.95, n_radii)
-angles = np.linspace(0, 2*np.pi, n_angles, endpoint=False)
-angles = np.repeat(angles[..., np.newaxis], n_radii, axis=1)
-angles[:, 1::2] += np.pi/n_angles
-x = (radii*np.cos(angles)).flatten()
-y = (radii*np.sin(angles)).flatten()
-z = (np.cos(radii)*np.cos(angles*3.0)).flatten()
-triang = mtri.Triangulation(x, y)
-xmid = x[triang.triangles].mean(axis=1)
-ymid = y[triang.triangles].mean(axis=1)
-mask = np.where(xmid**2 + ymid**2 < min_radius**2, 1, 0)
-triang.set_mask(mask)
-ax = fig.add_subplot(1, 2, 2, projection='3d')
-ax.plot_trisurf(triang, z, cmap=plt.cm.CMRmap)
-fig.suptitle('TODO', fontsize=50, fontweight='ultralight')
+img=np.zeros((512,512,3), np.uint8)
+cv2.rectangle(img,(0,0),(500,500),(80,100,100),1000)
+cv2.putText(img,'TO',(25,200),cv2.FONT_HERSHEY_SIMPLEX,6,(0,230,240), thickness=15)
+cv2.putText(img,'DO',(220,200),cv2.FONT_HERSHEY_SIMPLEX,6,(230,160,0),thickness=15)
 
+cv2.line(img,(390,120),(400,170),(0,230,240),15)
+cv2.line(img,(400,170),(480,50),(0,230,240),15)
+cv2.line(img,(420,165),(485,63),(80,100,100),8)
+cv2.line(img,(418,120),(499,-2),(80,100,100),7)
 
-plt.xticks([])
-plt.yticks([])
-ax.w_zaxis.line.set_lw(0.)
-ax.set_zticks([])
-plt.show()
+cv2.imshow('Logo',img)
+cv2.resizeWindow('Logo', 500,350)
 
+cv2.waitKey(0)
 
