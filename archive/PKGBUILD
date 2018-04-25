@@ -1,0 +1,25 @@
+# Maintainer: Thomas Hatzopoulos <thatzopoulos@luc.edu>
+pkgname=t3
+pkgver=1.2.0
+pkgrel=1
+pkgdesc="T3-Todo-List-Time-Tracker"
+arch=('1686' 'x86_64')
+url="https://j-adamski.github.io/T3-Todo-List-Time-Tracker/"
+license=('GPL')
+groups=('base-devel')
+depends=('python3')
+makedepends=()
+optdepends=()
+changelog=(CHANGES)
+source=(https://github.com/j-adamski/T3-Todo-List-Time-Tracker/archive/$pkgname-$pkgver.tar.gz)
+noextract=()
+md5sums=() #autofill using updpkgsums
+
+build() {
+  cd "$pkgname-$pkgver"
+  ./setup
+}
+
+package() {
+  cd "$pkgname-$pkgver"
+}
