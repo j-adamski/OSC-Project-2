@@ -1,4 +1,5 @@
-from unittest.mock import patch, MagicMock
+from unittest.mock import patch
+import json
 import builtins
 import t3
 import unittest
@@ -7,7 +8,15 @@ import unittest
 class TestT3(unittest.TestCase):
 
     def test_t3Complete(self):
+        inputFile = 'tasks/tasks.json'
+        jsonData = open(inputFile).read()
+        data = json.loads(jsonData)
+
         t3.t3Complete("homework3")
+
+        for k in data:
+            if "homework3" == k['projectName']:
+                self.assertTrue(k['completed'])
 
     def test_t3Report(self):
         t3.t3Report("active")
