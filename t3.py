@@ -36,16 +36,16 @@ def t3Report(userChoice):
         for k in jsonToPython:
             if k['completed'] == False:
                 print("Projects: ",k['projectName'])
-                print("Time Spent: ", k['timeSpent'])
+                print("Time Spent: ", k['timeSpent'],' minutes')
     elif userChoice == 'completed':
         for k in jsonToPython:
             if k['completed'] == True:
                 print("Projects: ",k['projectName'])
-                print("Time Spent: ", k['timeSpent'])
+                print("Time Spent: ", k['timeSpent'],' minutes')
     elif userChoice == 'all':
         for k in jsonToPython:
             print("Projects: ",k['projectName'])
-            print("Time Spent: ", k['timeSpent'])
+            print("Time Spent: ", k['timeSpent'], ' minutes')
             print("Completed (T/F): ",k['completed'])
     else:
         print("Invalid Option. Choose active/completed/all")
@@ -156,7 +156,6 @@ def _main():
     parser.add_argument("--stop/finish", help="stops timing of project, removes that projects start time timestamp and updates the timeSpent variable",action='store_true',default=False,dest='stopValue')
     parser.add_argument("--edit",help="edits the time spent on a project", action='store_true',default=False,dest="editValue")
     results = parser.parse_args()
-    print('Run Program as python3 t3.py --help for descriptions of arguments')
 
 
     if (results.reportValue) == True:
