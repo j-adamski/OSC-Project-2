@@ -1,0 +1,12 @@
+Metadata-Version: 1.2
+Name: t3
+Version: 1.1.0.dev1
+Summary: T3: Todo List Time Tracker
+Home-page: https://github.com/j-adamski/T3-Todo-List-Time-Tracker
+Author: comp412GroupProject
+Author-email: thatzopoulos@luc.edu
+License: GPL
+Project-URL: Documentation, https://github.com/j-adamski/T3-Todo-List-Time-Tracker/blob/master/README.md
+Description: T3 is a simple command line time tracking to do list application that is designed to assist those who struggle with time management
+Platform: UNKNOWN
+Requires-Python: >=3
