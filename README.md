@@ -11,8 +11,7 @@ To assist those who struggle with time management through a simple, easy to use,
 
 
 ## Visit our Website:
-![T3-Todo-List-Time-Tracker](https://j-adamski.github.io/T3-Todo-List-Time-Tracker/)
-
+[![T3-Todo-List-Time-Tracker](https://github.com/j-adamski/T3-Todo-List-Time-Tracker/blob/master/logos/linkToSite.png)](https://j-adamski.github.io/T3-Todo-List-Time-Tracker/)
 ## Installation/Compiling:
 Full Instructions can be found in [our Getting Started Guide](https://github.com/j-adamski/T3-Todo-List-Time-Tracker/blob/master/GettingStarted.md)
 ```
