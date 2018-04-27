@@ -30,22 +30,23 @@ def t3Report(userChoice):
 
     inputFile = 'tasks/tasks.json'
     jsonData=open(inputFile).read()
-    jsonToPython = json.loads(jsonData) 
+    jsonToPython = json.loads(jsonData)
+
     
     if userChoice == 'active':
         for k in jsonToPython:
             if k['completed'] == False:
                 print("Projects: ",k['projectName'])
-                print("Time Spent: ",  k['timeSpent'])
+                print("Time Spent: ",  time.strftime("%H:%M:%S", time.gmtime(k['timeSpent'])))
     elif userChoice == 'completed':
         for k in jsonToPython:
             if k['completed'] == True:
                 print("Projects: ",k['projectName'])
-                print("Time Spent: ", k['timeSpent'])
+                print("Time Spent: ", time.strftime("%H:%M:%S", time.gmtime(k['timeSpent'])))
     elif userChoice == 'all':
         for k in jsonToPython:
             print("Projects: ",k['projectName'])
-            print("Time Spent: ", k['timeSpent'])
+            print("Time Spent: ", time.strftime("%H:%M:%S", time.gmtime(k['timeSpent'])))
             print("Completed (T/F): ",k['completed'])
     else:
         print("Invalid Option. Choose active/completed/all")
@@ -96,7 +97,7 @@ def t3Edit(projectName):
             print("Current Time Is: " + str(k['timeSpent']))    
             newTime = input("Enter New Time In Minutes: ")
             #Converts user input of minutes to seconds
-            k['timeSpent'] = float(newTime*60)
+            k['timeSpent'] = float(newTime)
 
     with open('tasks/tasks.json', 'w') as f:
         json.dump(data, f)
