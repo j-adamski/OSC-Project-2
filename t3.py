@@ -36,16 +36,16 @@ def t3Report(userChoice):
         for k in jsonToPython:
             if k['completed'] == False:
                 print("Projects: ",k['projectName'])
-                print("Time Spent: ", k['timeSpent'],' minutes')
+                print("Time Spent: ",  k['timeSpent'])
     elif userChoice == 'completed':
         for k in jsonToPython:
             if k['completed'] == True:
                 print("Projects: ",k['projectName'])
-                print("Time Spent: ", k['timeSpent'],' minutes')
+                print("Time Spent: ", k['timeSpent'])
     elif userChoice == 'all':
         for k in jsonToPython:
             print("Projects: ",k['projectName'])
-            print("Time Spent: ", k['timeSpent'], ' minutes')
+            print("Time Spent: ", k['timeSpent'])
             print("Completed (T/F): ",k['completed'])
     else:
         print("Invalid Option. Choose active/completed/all")
@@ -148,13 +148,13 @@ def _main():
     
     parser.add_argument('userParserInput', help="the user input, will be printed if there are no arguments")
     
-    parser.add_argument("--add",help="Counts as a working time activity, will be saved under Projects in exampleTimedTasks",action='store_true', default=False, dest='addValue')
-    parser.add_argument("--complete",help="Marks project as completed",action="store_true",default=False,dest="completeValue")
-    parser.add_argument("--delete", help="removes activity when finished from exampleTimedTasks",action='store_true',default=False,dest='deleteValue')
-    parser.add_argument("--report", help="prints out basic report of the week by default from exampleTimedTasks",action='store_true', default=False, dest='reportValue',)
-    parser.add_argument("--start", help="starts timing project worktime, will overwrite existing start time if there is one.",action='store_true',default=False,dest='startValue')
-    parser.add_argument("--stop/finish", help="stops timing of project, removes that projects start time timestamp and updates the timeSpent variable",action='store_true',default=False,dest='stopValue')
-    parser.add_argument("--edit",help="edits the time spent on a project", action='store_true',default=False,dest="editValue")
+    parser.add_argument("--add",help="Adds a Project to your list",action='store_true', default=False, dest='addValue')
+    parser.add_argument("--complete",help="Marks project on list as completed",action="store_true",default=False,dest="completeValue")
+    parser.add_argument("--delete", help="Removes Project from list",action='store_true',default=False,dest='deleteValue')
+    parser.add_argument("--report", help="Prints out basic report. Options: active/all/completed  (default=active)",action='store_true', default=False, dest='reportValue',)
+    parser.add_argument("--start", help="Starts timing of Project, will overwrite existing tracked time if project is already being tracked",action='store_true',default=False,dest='startValue')
+    parser.add_argument("--stop/finish", help="Stops timing of Project, updates total run time", action='store_true',default=False,dest="stopValue")
+    parser.add_argument("--edit", help="Edits the time spent on a Project (in minutes)", action='store_true',default=False,dest="editValue")
     results = parser.parse_args()
 
 
